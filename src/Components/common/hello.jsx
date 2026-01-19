@@ -10,7 +10,7 @@ const Collections = () => {
                 "https://dummyjson.com/products?limit=10"
             )
             const imageUrl = response.data.products[1].images[0]
-            console.log("dsf");
+            console.log("dsf a");
  
             setImg(imageUrl)
         }
