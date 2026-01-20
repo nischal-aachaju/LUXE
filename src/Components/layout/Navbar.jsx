@@ -14,13 +14,13 @@ const Navbar = () => {
           <ShoppingBag className='cursor-pointer' strokeWidth={1} />
         </div>
         <div onClick={() => { setMenuBox(!menuBox) }} className=' ml-2 cursor-pointer h-full w-full flex items-center justify-center'>
-          {menuBox ? <TextAlignJustify strokeWidth={1.1} /> : <X strokeWidth={1} size={32} />}
+          {menuBox ? <TextAlignJustify strokeWidth={1.1} /> : <X  strokeWidth={1} size={32} />}
 
         </div>
       </div>
-      {menuBox?null:<nav className='absolute h-80 w-full top-14 left-0   z-10 flex flex-col items-end '>
+      {menuBox?null:<nav className='absolute h-80 w-full top-14 left-0 border-t   z-10 flex flex-col items-end '>
         {nav.map((elem) => {
-          return <a className='bg-red-50 w-full h-16 text-center pt-5 text-xl active:underline ' href="">{elem}</a>
+          return <a className='bg-orange-100 w-full h-14 text-center pt-3 text-xl border-b border-white active:underline ' href="">{elem}</a>
         })}
       </nav>}
 
