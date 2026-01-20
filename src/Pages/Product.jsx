@@ -13,7 +13,7 @@ const Product = () => {
 
       <main className="w-full h-866.25 0 px-4 ">
         <div className="w-full h-fit  mb-8">
-          <img src={thumbnail} alt="" srcset="" className="w-full mb-6" />
+          <img src={thumbnail} alt=""  className="w-full mb-6" />
 
           <div className="w-full  flex gap-1 justify-center items-center">
             <img className="w-[24%] h-21" src={otherimg} />

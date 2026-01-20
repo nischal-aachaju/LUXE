@@ -7,14 +7,14 @@ const Navbar = () => {
 
   return (
     <div className=' sticky top-0 h-14 bg-white  w-full z-100'>
-      <div className=' h-14  w-fill flex justify-between pl-4 shadow-[0px_-6px_10px_0px_#525252]'>
+      <div className=' h-14  w-fill flex justify-between px-4 shadow-[0px_-6px_10px_0px_#525252]'>
         <div className=' flex justify-center items-center w-fit '><h1 className=' text-2xl font-bold font-serif text-black'>LUXE</h1></div>
-        <div className=' flex w-30 items-center'>
+        <div className=' flex w-26 items-center justify-between'>
           <div className=' flex gap-4'>
             <Search className='cursor-pointer' strokeWidth={1} />
             <ShoppingBag className='cursor-pointer' strokeWidth={1} />
           </div>
-          <div onClick={() => { setMenuBox(!menuBox) }} className=' ml-2 cursor-pointer h-full w-full flex items-center justify-center '>
+          <div onClick={() => { setMenuBox(!menuBox) }} className=' cursor-pointer h-full w-fit flex items-center'>
             {menuBox ? <TextAlignJustify strokeWidth={1.1} /> : <X strokeWidth={1} size={32} />}
           </div>
         </div>
