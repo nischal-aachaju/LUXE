@@ -7,6 +7,7 @@ const App = () => {
   return (
     <div className=" h-screen w-full">
       <Navbar />
+      <Home />
       <Product />
     </div>
   );
