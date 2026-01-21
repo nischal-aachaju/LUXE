@@ -10,7 +10,7 @@ const ContextApi = (props) => {
   const [api, setApi] = useState(null)
   useEffect(() => {
     const ApiCall = async () => {
-      const response = await axios.get(`https://dummyjson.com/products?limit=500`)
+      const response = await axios.get(`https://dummyjson.com/products?limit=200`)
       setApi(response.data.products)
     }
     ApiCall()

@@ -2,9 +2,6 @@ import React, { useState } from "react";
 import { Star, CircleUserRound, Circle } from "lucide-react";
 import Ratings from "../../Components/common/Ratings";
 
-export function RatingStar({ size, value }) {
-  return <Rating style={{ maxWidth: size }} value={value} readOnly />;
-}
 
 const ReviewComp = ({ rating }) => {
   return (

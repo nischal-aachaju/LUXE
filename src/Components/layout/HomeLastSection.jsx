@@ -28,8 +28,8 @@ const useData=data[100]
                     <p className='text-sm '>{useData.description}</p>
                 </div>
                 <div className='px-2 h-10  w-full flex items-center gap-2'>
-                    {tags.map((elem) => {
-                        return <p className='px-3 h-fit rounded-full border  border-gray-500/50 text-gray-800 '>{elem}</p>
+                    {tags.map((elem,idx) => {
+                        return <p key={idx} className='px-3 h-fit rounded-full border  border-gray-500/50 text-gray-800 '>{elem}</p>
                     })}
 
                 </div>
