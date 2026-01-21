@@ -1,7 +1,7 @@
 
 import Home from "./Pages/Home";
 import Navbar from "./Components/layout/Navbar";
-import Product from "./Pages/Product";
+import Product from "./Pages/Product/Product";
 import axios from "axios";
 import LoadingPage from "./Pages/LoadingPage";
 import { useContext } from "react";
@@ -19,7 +19,6 @@ const App = () => {
   return (
     <div className=" h-screen w-full">
       <Navbar />
-      <Home />
       <Product />
     </div>
   );

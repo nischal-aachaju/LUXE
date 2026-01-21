@@ -2,10 +2,10 @@ import React from "react";
 import thumbnail from "../assets/images/productpg/thumbnail_placeholder.png";
 import otherimg from "../assets/images/productpg/otherimg.png";
 import { Star, Truck, ShieldCheck, RotateCcw } from "lucide-react";
-import { AddToCartBTN, SaveLaterBTN } from "../Components/common/Buttons";
+import { AddToCartBTN, SaveLaterBTN } from "../../Components/common/Buttons";
 
-import Tags from "../Pages/Product/Tags";
-import Highlights from "../Pages/Product/Highlight";
+import Tags from "./Tags";
+import Highlights from "./Highlight";
 
 const BreadCrumb = () => {
   return (
