@@ -1,21 +1,20 @@
-
 import React, { useEffect, useState } from "react";
-import { createContext } from 'react'
+import { createContext } from "react";
 import axios from "axios";
 // eslint-disable-next-line react-refresh/only-export-components
-export const ApiDataContext = createContext()
+export const ApiDataContext = createContext();
 
 const ContextApi = (props) => {
-
-  const [api, setApi] = useState(null)
+  const [api, setApi] = useState(null);
   useEffect(() => {
     const ApiCall = async () => {
-      const response = await axios.get(`https://dummyjson.com/products?limit=500`)
-      setApi(response.data.products)
-    }
-    ApiCall()
-  }, [])
-
+      const response = await axios.get(
+        `https://dummyjson.com/products?limit=500`,
+      );
+      setApi(response.data.products);
+    };
+    ApiCall();
+  }, []);
 
   return (
     <div>
@@ -23,7 +22,7 @@ const ContextApi = (props) => {
         {props.children}
       </ApiDataContext.Provider>
     </div>
-  )
-}
+  );
+};
 
-export default ContextApi
+export default ContextApi;
