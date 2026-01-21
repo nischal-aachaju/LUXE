@@ -11,10 +11,19 @@ export const BreadCrumb = () => {
   );
 };
 
+export const BannerTag = () => {
+  return (
+    <div className="w-fit h-fit flex justify-center items-center font-md absolute bg-black top-2 left-2 text-white text-[8px] font-mont px-2 py-1">
+      NEW RELEASE
+    </div>
+  );
+};
+
 export const Imgs = () => {
   return (
-    <div className="w-full h-fit  mb-8">
+    <div className="w-full h-fit  mb-8 relative">
       <img src={thumbnail} alt="" className="w-full mb-6" />
+      <BannerTag />
 
       <div className="w-full  flex gap-1 justify-center items-center">
         <img className="w-[24%] h-21" src={otherimg} />

@@ -11,7 +11,7 @@ const Product = () => {
     <div className="bg-[#f9fafb] mt-14">
       <BreadCrumb />
 
-      <main className="w-full h-866.25 0 px-4 ">
+      <main className="w-full h-fit 0 px-4 ">
         <Imgs />
         <BasicInfo />
         <AddToCartBTN />

@@ -25,3 +25,11 @@ export const SaveLaterBTN = () => {
     </div>
   );
 };
+
+export const WriteReviewBTN = () => {
+  return (
+    <button className="w-full h-16 bg-[#ffffff] flex items-center justify-center px-5 font-mont border-gray-400/30 border text-[12px] font-semibold mb-4">
+      SAVE FOR LATER
+    </button>
+  );
+};
