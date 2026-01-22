@@ -16,7 +16,7 @@ const App = () => {
     <div className=" h-screen w-full">
       <Navbar />
       <Home/>
-      {/* <Product /> */}
+      <Product />
       <Footer />
     </div>
   );
