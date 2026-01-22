@@ -12,7 +12,7 @@ const Navbar = () => {
   const nav = ["New Arrivals", "Collections", "Accessories", "Editorial"];
 
   return (
-    <div className=" fixed top-0 h-14 bg-white  w-full z-100">
+    <div className="md:bg-amber-400 fixed top-0 h-14 bg-white  w-full z-100">
       <div className=" h-14  w-fill flex justify-between px-4 shadow-[0px_-6px_10px_0px_#525252]">
         <div className=" flex justify-center items-center w-fit ">
           <h1 className=" text-2xl font-bold font-serif text-black">LUXE</h1>

@@ -5,6 +5,7 @@ import Product from "./Pages/Product/Product";
 import LoadingPage from "./Pages/LoadingPage";
 import { useContext } from "react";
 import { ApiDataContext } from "./Context/ContextApi";
+import NavbarDesktop from "./Components/layout/NavbarDesktop";
 
 const App = () => {
   const data = useContext(ApiDataContext);
@@ -14,8 +15,13 @@ const App = () => {
   }
   return (
     <div className=" h-screen w-full">
-      <Navbar />
-      <Home/>
+      <div className=" block md:hidden">
+        <Navbar />
+      </div>
+      <div className=" hidden md:block">
+        <NavbarDesktop />
+      </div>
+      <Home />
       <Product />
       <Footer />
     </div>
