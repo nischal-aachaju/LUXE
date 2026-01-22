@@ -62,8 +62,8 @@ return <div key={idx}></div>
                 </div>
                 <div className=' px-4 py-0 h-160  md:h-100  w-full place-items-center md:grid-cols-4 grid grid-cols-2 '>
                     {newArrivel.map((elem, idx) => {
-                        return <div key={idx} className='h-78 w-fit mx-1   shrink-0 overflow-hidden '>
-                            <img className=' h-50 md:h-60 bg-white border  border-gray-300/80' src={elem.thumbnail} alt="" />
+                        return <div key={idx} className='max-h-85  w-fit mx-1  shrink-0 '>
+                            <img className=' h-50  md:h-60 bg-white border  border-gray-300/80' src={elem.thumbnail} alt="" />
                             <div className='h-20 w-full flex flex-col pt-2'>
                                 <h5 className='text-[14px] font-serif'>{elem.title}</h5>
                                 <div className=' flex '>
