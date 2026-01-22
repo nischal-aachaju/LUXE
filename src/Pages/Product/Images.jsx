@@ -20,7 +20,6 @@ const Imgcomp = ({ link, onClick }) => {
 
 const Imgs = ({ images, thumbnail, bannerTag }) => {
   const [thumb, setthumb] = useState(thumbnail);
-  console.log(bannerTag);
 
   return (
     <div className="w-full h-fit flex flex-col mb-8 relative md:w-[60%]  max-w-124 mx-auto ">
