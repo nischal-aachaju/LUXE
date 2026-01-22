@@ -5,6 +5,7 @@ import { ApiDataContext } from '../Context/ContextApi'
 import { useContext } from 'react'
 import HomeLastSection from '../Components/layout/HomeLastSection'
 
+
 const  Home = () => {
     const data = useContext(ApiDataContext)
     let collections = []
@@ -13,6 +14,11 @@ const  Home = () => {
     for (let i = 0; i < 4; i++) {
         collections.push(data[i + 80])
         newArrivel.push(data[i + 90])
+
+    }
+    function Product(idx){
+        console.log("helo",idx);
+return <div key={idx}></div>
 
     }
 
@@ -44,7 +50,7 @@ const  Home = () => {
                     <div className=' mt-10 w-full h-fit grid grid-cols-2 gap-4  place-items-center'>
 
                     {collections.map((e, idx) => {
-                        return <CollectionsSection key={idx} data={e} />
+                        return <div key={idx} onClick={()=>{Product(idx)}}><CollectionsSection  key={idx} data={e} /></div>
                     })}
                 </div>
 

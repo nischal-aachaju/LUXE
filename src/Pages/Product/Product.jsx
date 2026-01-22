@@ -8,11 +8,12 @@ import Review from "./Review";
 import Imgs from "./Images";
 import { ApiDataContext } from "../../Context/ContextApi";
 
-const id = 10;
 
-const Product = () => {
+
+const Product = ({idx}) => {
+  let id = {idx};
   const fullData = useContext(ApiDataContext);
-  const data = fullData[id + 1];
+  const data = fullData[id];
 
   const {
     title,
