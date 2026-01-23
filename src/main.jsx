@@ -5,6 +5,8 @@ import App from "./App.jsx";
 import ContextApi from "./Context/ContextApi.jsx";
 import "@smastrom/react-rating/style.css";
 import { BrowserRouter } from "react-router-dom";
+
+
 createRoot(document.getElementById("root")).render(
   <ContextApi>
     <BrowserRouter>

@@ -6,13 +6,9 @@ import HomeLastSection from "../Components/layout/HomeLastSection";
 import { Link } from "react-router-dom";
 const Home = () => {
   const data = useContext(ApiDataContext);
-  let collections = [];
-  let newArrivel = [];
+  const collections = data.slice(2, 6);
+  const newArrivel = data.slice(10, 14);
 
-  for (let i = 0; i < 4; i++) {
-    collections.push(data[i + 5]);
-    newArrivel.push(data[i + 10]);
-  }
   function Product(idx) {
     console.log("helo", idx);
     return <div key={idx}></div>;
@@ -60,7 +56,6 @@ const Home = () => {
         <div className=" mt-10 w-full h-fit grid grid-cols-2 md:grid-cols-4 gap-4  place-items-center">
           {collections.map((e, idx) => {
             return (
-              
               <div
                 key={idx}
                 onClick={() => {

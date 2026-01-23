@@ -11,8 +11,8 @@ import LoadingPage from "../LoadingPage";
 
 const Product = () => {
   const id = 13;
-
   const [productData, setProductData] = useState(null);
+
   useEffect(() => {
     const getThatProduct = async () => {
       try {
