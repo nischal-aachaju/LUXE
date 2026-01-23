@@ -2,7 +2,7 @@ import React from "react";
 import { Facebook, Camera, AtSign } from "lucide-react";
 const Footer = () => {
   return (
-    <div className="w-full h-90 md:h-50 flex flex-col px-4 mt-32 font-mont bg-gray-100 pt-4">
+    <div className="w-full h-90 md:h-50 flex flex-col px-4 font-mont bg-gray-100 pt-4">
       <div className=" w-full h-76 grid grid-cols-2 md:grid-cols-4 md:h-30 gap-2 mb-2">
         <div className=" pr-2">
           <h1 className="text-xl font-semibold font-serif">LUXE</h1>
