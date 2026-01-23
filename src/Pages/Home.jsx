@@ -50,11 +50,10 @@ const Home = () => {
 
         <div className=" mt-10 w-full h-fit grid grid-cols-2 md:grid-cols-4 gap-4  place-items-center">
           {collections.map((e, idx) => {
-            
-            
             return (
-            
-                <Link key={e.id} to={`/products/${e.id}`} ><CollectionsSection key={idx} data={e} /></Link>
+              <Link key={e.id} to={`/products/${e.id}`}>
+                <CollectionsSection key={idx} data={e} />
+              </Link>
             );
           })}
         </div>
@@ -68,40 +67,40 @@ const Home = () => {
             This Week's Arrivals
           </h5>
         </div>
-        
+
         <div className=" px-4 py-0 h-160  md:h-100  w-full place-items-center md:grid-cols-4 grid grid-cols-2 ">
           {newArrivel.map((elem, idx) => {
             return (
-            <Link key={elem.id} to={`/products/${elem.id}`} >
-               <div className="max-h-85  w-fit mx-1  shrink-0 ">
-                <img
-                  className=" h-50  md:h-60 bg-white border  border-gray-300/80"
-                  src={elem.thumbnail}
-                  alt=""
-                />
-                <div className="h-20 w-full flex flex-col pt-2">
-                  <h5 className="text-[14px] font-serif">{elem.title}</h5>
-                  <div className=" flex ">
-                    <div className="  w-1/2">
-                      <p className="text-[12px] uppercase">{elem.category}</p>
-                      <div>
-                        <p className="text-[13px] font-bold">${elem.price}</p>
+              <Link key={idx} to={`/products/${elem.id}`}>
+                <div className="max-h-85  w-fit mx-1  shrink-0 ">
+                  <img
+                    className=" h-50  md:h-60 bg-white border  border-gray-300/80"
+                    src={elem.thumbnail}
+                    alt=""
+                  />
+                  <div className="h-20 w-full flex flex-col pt-2">
+                    <h5 className="text-[14px] font-serif">{elem.title}</h5>
+                    <div className=" flex ">
+                      <div className="  w-1/2">
+                        <p className="text-[12px] uppercase">{elem.category}</p>
+                        <div>
+                          <p className="text-[13px] font-bold">${elem.price}</p>
+                        </div>
                       </div>
-                    </div>
 
-                    <div className=" w-1/2 h-full flex justify-end text-[14px] gap-1 pr-2">
-                      <Star
-                        size={18}
-                        fill="#ffd700"
-                        color="#000"
-                        strokeWidth={0.2}
-                      />
-                      <p>{elem.rating}</p>
+                      <div className=" w-1/2 h-full flex justify-end text-[14px] gap-1 pr-2">
+                        <Star
+                          size={18}
+                          fill="#ffd700"
+                          color="#000"
+                          strokeWidth={0.2}
+                        />
+                        <p>{elem.rating}</p>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            </Link>
+              </Link>
             );
           })}
         </div>
