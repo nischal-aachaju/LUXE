@@ -8,7 +8,7 @@ const Discovery = () => {
 //    console.log(data);
     
   return (
-    <div className='my-20 w-full h-fit  flex flex-wrap gap-4 justify-center'>
+    <div className='my-20 w-full   h-fit md:pb-20 flex flex-wrap gap-2 sm:gap-10 md:gap-20  justify-center'>
       {data.map((elem,idx)=>{
         
         return <DiscoveryComponent key={idx} elem={elem}  />

@@ -4,7 +4,7 @@ const DiscoveryComponent = ({elem}) => {
 
     
   return (
-    <div className=" h-50 w-37 md:h-60 md:w-48  mt-20 shrink-0 ">
+    <div className="h-50 w-40  md:w-auto md:aspect-square  mt-20 shrink-0 ">
       <img
         className=" h-50  md:h-60 bg-white border  border-gray-300/80"
         src={elem.thumbnail}
