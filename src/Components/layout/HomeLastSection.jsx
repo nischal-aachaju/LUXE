@@ -3,7 +3,7 @@ import { ApiDataContext } from "../../Context/ContextApi";
 import RatingStar from "../common/Ratings";
 import { Link } from "react-router-dom";
 const HomeLastSection = () => {
-  const limit = 25;
+  const limit = 10;
 
   const randomIdx = Math.floor(Math.random() * (limit + 1)); // Inclusive
   const data = useContext(ApiDataContext);

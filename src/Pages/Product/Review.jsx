@@ -38,7 +38,7 @@ const Review = ({ reviews, rating }) => {
   const canToggle = reviews.length > defaultCount;
 
   return (
-    <div className="w-full h-fit mt-16 mb-8 flex flex-col mx-auto max-w-124 md:max-w-none lg:max-w-none">
+    <div className="w-full h-fit mt-16 mb-0 flex flex-col mx-auto max-w-124 md:max-w-none lg:max-w-none">
       <div className="w-full flex flex-col h-fit  mb-8 ">
         <div className=" text-3xl font-mont font-semibold">REVIEWS</div>
         <div className="flex gap-4">

@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 const Home = () => {
   const data = useContext(ApiDataContext);
   const collections = data.slice(2, 6);
-  const newArrivel = data.slice(10, 14);
+  const newArrivel = data.slice(6, 10);
 
   return (
     <div className="mt-14 mb-10">

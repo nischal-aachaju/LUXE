@@ -1,6 +1,6 @@
 import { AddToCartBTN, SaveLaterBTN } from "../../Components/common/Buttons";
 import { BreadCrumb, BasicInfo, Desc, Policy } from "./Comps";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 
 import Tags from "./Tags";
 import Dimensions from "./Dimensions";
@@ -12,6 +12,7 @@ import { ApiDataContext } from "../../Context/ContextApi";
 const Product = () => {
   const { id } = useParams();
 
+  useEffect(() => window.scrollTo(0, 0), []);
   const data = useContext(ApiDataContext); // gives the whole fetched array
 
   const productData = data.find((el) => el.id == id); //Dumbass Find wrong use garexau ani ka chalxa ta (Provides the el if matches or else undefined)
