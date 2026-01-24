@@ -15,10 +15,10 @@ export const BasicInfo = ({ title, price, rating, reviews, stock }) => {
   return (
     <div className="h-fit text&price flex flex-col pb-8 ">
       <span className="text-[10px]">{stock.toUpperCase()}</span>
-      <span className="text-3xl font-mont font-extrabold mb-2">{title}</span>
+      <span className="mb-2 text-3xl font-extrabold font-mont">{title}</span>
       <div className="text-2xl font-mont font-medium w-full h-13  flex items-center justify-between px-0.5  border-b-gray-400/20 border-b  ">
         <span>${price}</span>
-        <div className="flex flex-col gap-1 items-end">
+        <div className="flex flex-col items-end gap-1">
           <Ratings size="70px" value={rating} />
           <span className="text-[10px]">{reviews.length} verified reviews</span>
         </div>
@@ -28,21 +28,21 @@ export const BasicInfo = ({ title, price, rating, reviews, stock }) => {
 };
 
 export const Desc = ({ desc }) => {
-  return <div className="w-full h-fit text-sm font-light mb-6">{desc}</div>;
+  return <div className="w-full mb-6 text-sm font-light h-fit">{desc}</div>;
 };
 
 export const Policy = ({ warrInfo, shipInfo, returnInfo }) => {
   return (
     <div className="flex flex-col justify-center gap-2 w-full h-fit text-[10px] text-green-600 font-mont ">
-      <span className="flex gap-1  items-center">
+      <span className="flex items-center gap-1">
         <Truck size={12} color="#16A34A" />
         {shipInfo}
       </span>
-      <span className="flex gap-1  items-center">
+      <span className="flex items-center gap-1">
         <ShieldCheck color="#16A34A" size={12} />
         {warrInfo}
       </span>
-      <span className="flex gap-1  items-center">
+      <span className="flex items-center gap-1">
         <RotateCcw size={12} color="#16A34A" />
         {returnInfo}
       </span>

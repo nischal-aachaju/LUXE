@@ -2,15 +2,15 @@ import React from "react";
 import { Facebook, Camera, AtSign } from "lucide-react";
 const Footer = () => {
   return (
-    <div className="w-full h-90 md:h-50 flex flex-col px-4 font-mont bg-gray-100 pt-4">
-      <div className=" w-full h-76 grid grid-cols-2 md:grid-cols-4 md:h-30 gap-2 mb-2">
-        <div className=" pr-2">
-          <h1 className="text-xl font-semibold font-serif">LUXE</h1>
+    <div className="flex flex-col w-full px-4 pt-4 bg-gray-100 h-90 md:h-50 font-mont">
+      <div className="grid w-full grid-cols-2 gap-2 mb-2 h-76 md:grid-cols-4 md:h-30">
+        <div className="pr-2 ">
+          <h1 className="font-serif text-xl font-semibold">LUXE</h1>
           <p className="text-[10px] text-gray-600 mb-1">
             Refining the art of living with premium essentials curated for the
             discerning individual. Quality, elegance, and timeless design.
           </p>
-          <div className=" w-full flex gap-1 ">
+          <div className="flex w-full gap-1 ">
             <Facebook color="#4a5555" size={22} strokeWidth={1} />
             <Camera size={22} color="#4a5555" strokeWidth={1} />
             <AtSign size={22} color="#4a5555" strokeWidth={1} />
@@ -44,7 +44,7 @@ const Footer = () => {
             Subscribe to receive updates, access to exclusive deals, and more.
           </p>
           <input
-            className="h-9 my-1 w-full border border-gray-600/50 bg-white"
+            className="w-full my-1 bg-white border h-9 border-gray-600/50"
             name=""
             id=""
           ></input>
@@ -54,10 +54,10 @@ const Footer = () => {
         </div>
       </div>
       <div className=" w-full h-14 md:h-20  border-t border-gray-300/60 flex md:flex-col justify-between md:justify-center text-[9px] md:text-[10px] ">
-        <div className=" h-full w-1/2 md:w-full flex items-center md:justify-center">
+        <div className="flex items-center w-1/2 h-full md:w-full md:justify-center">
           <p>© 2024 Luxe Inc. All rights reserved.</p>
         </div>
-        <div className=" h-full w-1/2 md:w-full  flex justify-end gap-2 md:gap-4 md:underline items-center md:justify-center">
+        <div className="flex items-center justify-end w-1/2 h-full gap-2 md:w-full md:gap-4 md:underline md:justify-center">
           <p>Privacy Policy</p>
           <p>Terms of Service</p>
         </div>

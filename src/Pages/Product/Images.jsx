@@ -29,7 +29,7 @@ const Imgs = ({ images, thumbnail, bannerTag }) => {
         className="w-full shadow-[0_0_12px_rgba(0,0,0,0.15)] mb-6"
       />
       {bannerTag && <BannerTag text={bannerTag} />}
-      <div className="w-full  flex gap-1 justify-baseline items-center overflow-hidden shrink-0">
+      <div className="flex items-center w-full gap-1 overflow-hidden justify-baseline shrink-0">
         {images.map((img, idx) => {
           return (
             <Imgcomp

@@ -1,7 +1,7 @@
 const DimensionComp = ({ e }) => {
   return (
-    <div className="w-1/3 h-full  border-gray-400/30 bg-white border flex justify-center flex-col overflow-hidden items-center">
-      <span className="font-mont font-bold text-xl">
+    <div className="flex flex-col items-center justify-center w-1/3 h-full overflow-hidden bg-white border border-gray-400/30">
+      <span className="text-xl font-bold font-mont">
         {e.length}
         <sup className="text-gray-400 font-normal text-[12px]">
           {e.subScript}
