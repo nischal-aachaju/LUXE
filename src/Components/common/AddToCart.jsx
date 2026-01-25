@@ -1,14 +1,18 @@
-
 import { Key, MoveRight } from "lucide-react";
 
 import { useParams } from "react-router-dom";
 const AddToCartBtn = () => {
-//   localStorage.clear()
+  //   localStorage.clear()
   const { id } = useParams();
   const AddToCart = () => {
-
     const existingCart = JSON.parse(localStorage.getItem("cart")) || [];
-    existingCart.push(id);
+
+    const item = existingCart.find((item) => {
+      return item.id == id;
+    });
+
+    item ? item.count++ : existingCart.push({ id: Number(id), count: 1 });
+
     localStorage.setItem("cart", JSON.stringify(existingCart));
   };
 
@@ -27,4 +31,4 @@ const AddToCartBtn = () => {
   );
 };
 
-export default AddToCartBtn
+export default AddToCartBtn;

@@ -1,20 +1,69 @@
-import React, { useContext } from 'react'
-import { ApiDataContext } from '../../Context/ContextApi'
+import React, { useContext, useEffect, useState } from "react";
+import { ApiDataContext } from "../../Context/ContextApi";
 
-const CartProduct = ({id}) => {
-    console.log(id);
-   
-    const data=useContext(ApiDataContext)
+const CartProduct = ({ itemData }) => {
+  const id = Number(itemData.id);
+
+  const [count, setCount] = useState(Number(itemData.count));
+
+  useEffect(() => {
+    const existingCart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    const item = existingCart.find((item) => {
+      return item.id === id;
+    });
+
+    item.count = count;
+
+    localStorage.setItem("cart", JSON.stringify(existingCart));
+  }, [count, id]);
+
+  const data = useContext(ApiDataContext);
+  const product = data.find((e) => e.id == id);
   return (
-    <div className='flex items-center gap-4 bg-white w-[99%] h-30 rounded-2xl'>
-        <div className='ml-3 bg-gray-200 h-25 w-3/10 sm:w-2/10 md:w-3/20 lg:w-2/20 rounded-xl'><img className='w-full h-full' src={data[id].thumbnail} alt="" /></div>
-        <div className='flex h-full pt-6 font-serif font-semibold w-4/10 '>
-            <h2>{data[id].title}</h2>
+    <div className="w-full bg-white rounded-2xl border border-gray-200">
+      <div className="flex items-center gap-4 p-3 sm:p-4">
+        {/* Image */}
+        <div className="h-20 w-20 sm:h-24 sm:w-24 bg-gray-100 rounded-xl overflow-hidden shrink-0">
+          <img
+            src={product.thumbnail}
+            alt={product.title}
+            className="w-full h-full object-cover"
+          />
         </div>
-        <div className='flex items-end h-full font-semibold w-3/10 p-b-5 w'>${data[id].price}</div>
-      
-    </div>
-  )
-}
+        {/* Title */}
+        <div className="flex-1">
+          <h2 className="font-serif font-semibold text-sm sm:text-base leading-tight">
+            {product.title}
+          </h2>
+        </div>
 
-export default CartProduct
+        <div className="flex justify-center items-center gap-3">
+          <button
+            className="px-1 border rounded w-6 flex justify-center pb-1"
+            onClick={() => {
+              setCount((prev) => Math.max(1, prev - 1));
+            }}
+          >
+            -
+          </button>
+          {count}
+          <button
+            className="px-1 border rounded w-6 pb-1"
+            onClick={() => {
+              setCount((prev) => prev + 1);
+            }}
+          >
+            +
+          </button>
+        </div>
+        {/* Price */}
+        <div className="font-semibold text-sm sm:text-base">
+          ${product.price}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default CartProduct;
