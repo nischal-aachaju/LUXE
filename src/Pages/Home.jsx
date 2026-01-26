@@ -10,7 +10,6 @@ import "swiper/css/pagination";
 
 import SwiperHomeComp from "./SwiperHomeComp";
 
-// import required modules
 import { Autoplay, Pagination } from "swiper/modules";
 
 const Home = () => {
@@ -111,7 +110,7 @@ const Home = () => {
           })}
         </div>
       </div>
-      <div className="flex flex-col justify-between w-full bg-gray-100 h-210 md:h-120">
+      <div className="flex flex-col justify-between w-full bg-gradient-to-b from-gray-50 to-gray-100 py-8">
         <div className="flex flex-col items-center gap-2 py-8 h-30">
           <p className="uppercase  text-sm text-shadow-[0px_0px_0.1px_#000] font-bold tracking-wide text-[#d4af37]">
             Fresh Drop
@@ -121,34 +120,64 @@ const Home = () => {
           </h5>
         </div>
 
-        <div className="grid w-full grid-cols-2 px-4 py-0 h-160 md:h-100 place-items-center md:grid-cols-4">
+        <div className="grid w-full grid-cols-2 gap-4 md:gap-6 px-4 md:px-8 py-4 place-items-center md:grid-cols-4">
           {newArrivel.map((elem, idx) => {
             return (
-              <Link key={idx} to={`/products/${elem.id}`}>
-                <div className="mx-1 max-h-85 w-fit shrink-0 ">
-                  <img
-                    className="bg-white border h-50 md:h-60 border-gray-300/80"
-                    src={elem.thumbnail}
-                    alt=""
-                  />
-                  <div className="flex flex-col w-full h-20 pt-2">
-                    <h5 className="text-[14px] font-serif">{elem.title}</h5>
-                    <div className="flex ">
-                      <div className="w-1/2 ">
-                        <p className="text-[12px] uppercase">{elem.category}</p>
-                        <div>
-                          <p className="text-[13px] font-bold">${elem.price}</p>
-                        </div>
+              <Link key={idx} to={`/products/${elem.id}`} className="w-full">
+                <div className="group relative bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-500 cursor-pointer">
+                  <div className="relative overflow-hidden bg-gradient-to-br from-gray-50 to-gray-100">
+                    <img
+                      className="w-full h-48 md:h-56 lg:h-64 object-contain p-2 transition-transform duration-700 ease-out group-hover:scale-105"
+                      src={elem.thumbnail}
+                      alt={elem.title}
+                    />
+                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300" />
+
+                    <div className="absolute top-3 right-3 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
+                      <span className="text-[10px] font-semibold text-white uppercase tracking-wider bg-black/70 backdrop-blur-sm px-2 py-1 rounded-full">
+                        Quick View
+                      </span>
+                    </div>
+
+                    <div className="absolute top-3 left-3">
+                      <span className="text-[10px] font-bold text-white uppercase tracking-wide bg-gradient-to-r from-amber-500 to-orange-500 px-2.5 py-1 rounded-full shadow-sm">
+                        New
+                      </span>
+                    </div>
+                  </div>
+
+                  <div className="p-3 md:p-4 space-y-2">
+                    <span className="inline-block text-[10px] md:text-[11px] uppercase tracking-wider text-amber-600 font-semibold">
+                      {elem.category}
+                    </span>
+
+                    <h5 className="text-sm md:text-[15px] font-serif font-medium text-gray-900 leading-tight line-clamp-2 group-hover:text-amber-700 transition-colors duration-300">
+                      {elem.title}
+                    </h5>
+
+                    <div className="flex items-center justify-between pt-1">
+                      <div className="flex items-baseline gap-1.5">
+                        <span className="text-lg md:text-xl font-bold text-gray-900">
+                          ${elem.price}
+                        </span>
                       </div>
 
-                      <div className=" w-1/2 h-full flex justify-end text-[14px] gap-1 pr-2">
+                      <div className="flex items-center gap-1 bg-gray-100 px-2 py-0.5 rounded-full">
                         <Star
-                          size={18}
-                          fill="#ffd700"
-                          color="#000"
-                          strokeWidth={0.2}
+                          size={14}
+                          fill="#fbbf24"
+                          color="#fbbf24"
+                          strokeWidth={0}
                         />
-                        <p>{elem.rating}</p>
+                        <span className="text-xs font-semibold text-gray-700">
+                          {elem.rating}
+                        </span>
+                      </div>
+                    </div>
+
+                    <div className="pt-2 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
+                      <div className="w-full py-2 text-center text-xs font-semibold text-white uppercase tracking-wider bg-gradient-to-r from-gray-800 to-gray-900 rounded-lg hover:from-gray-900 hover:to-black transition-all duration-300">
+                        Add to Cart
                       </div>
                     </div>
                   </div>
