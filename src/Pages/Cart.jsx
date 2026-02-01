@@ -34,7 +34,7 @@ const Cart = () => {
            cartData.map((e, idx) => {
 
 
-              return <CartProduct key={idx} itemData={e} />
+              return <CartProduct key={idx} itemData={e} idx={idx} />
            } )
           
         ) : (

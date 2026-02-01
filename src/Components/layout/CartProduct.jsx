@@ -1,13 +1,17 @@
 import React, { useContext, useEffect, useState } from "react";
 import { ApiDataContext } from "../../Context/ContextApi";
 
-const CartProduct = ({ itemData }) => {
+const CartProduct = ({ itemData,idx }) => {
   const id = itemData.id;
 
   const [count, setCount] = useState(Number(itemData.count));
 
+
+
+
   useEffect(() => {
     const existingCart = JSON.parse(localStorage.getItem("cart")) || [];
+
 
     const item = existingCart.find((item) => {
       return item.id === id;
@@ -18,13 +22,22 @@ const CartProduct = ({ itemData }) => {
     localStorage.setItem("cart", JSON.stringify(existingCart));
   }, [count, id]);
 
+
   const data = useContext(ApiDataContext);
 
   const product = data.find((e) => e.id == id);
 
+
+    const itemDelete =()=>{
+    console.log("items deleted");
+    
+  
+  }
+
+  
   return (
-    <div className="w-full bg-white rounded-2xl border border-gray-200">
-      <div className="flex items-center gap-4 p-3 sm:p-4">
+    <div className="w-full h-full bg-white rounded-2xl border border-gray-200 flex justify-evenly items-center gap-4 p-3 sm:p-4">
+      
         {/* Image */}
         <div className="h-20 w-20 sm:h-24 sm:w-24 bg-gray-100 rounded-xl overflow-hidden shrink-0">
           <img
@@ -34,8 +47,8 @@ const CartProduct = ({ itemData }) => {
           />
         </div>
         {/* Title */}
-        <div className="flex-1">
-          <h2 className="font-serif font-semibold text-sm sm:text-base leading-tight">
+        <div className="flex-1 h-full  w-20 ">
+          <h2 className="font-serif w-fit font-semibold text-sm sm:text-base leading-tight">
             {product.title}
           </h2>
         </div>
@@ -67,9 +80,14 @@ const CartProduct = ({ itemData }) => {
           </button>
           
         </div>
+        <div
+        onClick={()=>{itemDelete()}} 
+         className=" rounded-2xl bg-red-600 text-center mr-2 hover:bg-red-500 text-white w-20 h-full ">
+          Delete
+        </div>
         {/* Price */}
       </div>
-    </div>
+  
   );
 };
 
