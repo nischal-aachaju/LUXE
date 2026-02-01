@@ -1,7 +1,7 @@
 
 const CollectionsSection = ({ data }) => {
   return (
-    <div className="group relative flex items-center justify-center overflow-hidden h-60 w-44 md:h-72 md:w-48 lg:w-60 lg:h-80 rounded-xl bg-linear-to-br from-gray-100 to-gray-200 shadow-lg hover:shadow-2xl transition-all duration-500 ease-out cursor-pointer">
+    <div className="group relative flex items-center justify-center overflow-hidden h-60 w-44 md:h-72 md:w-40 lg:w-54 lg:h-80 rounded-xl bg-linear-to-br from-gray-100 to-gray-200 shadow-lg hover:shadow-2xl transition-all duration-500 ease-out cursor-pointer">
       <img
         className="object-contain w-full h-full transition-transform duration-700 ease-out group-hover:scale-110"
         src={data.thumbnail}

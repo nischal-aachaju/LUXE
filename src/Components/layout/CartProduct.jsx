@@ -2,8 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 import { ApiDataContext } from "../../Context/ContextApi";
 
 const CartProduct = ({ itemData }) => {
-  const id = itemData.id
-
+  const id = itemData.id;
 
   const [count, setCount] = useState(Number(itemData.count));
 
@@ -20,11 +19,9 @@ const CartProduct = ({ itemData }) => {
   }, [count, id]);
 
   const data = useContext(ApiDataContext);
-  
+
   const product = data.find((e) => e.id == id);
 
-
-  
   return (
     <div className="w-full bg-white rounded-2xl border border-gray-200">
       <div className="flex items-center gap-4 p-3 sm:p-4">
@@ -43,7 +40,14 @@ const CartProduct = ({ itemData }) => {
           </h2>
         </div>
 
-        <div className="flex justify-center items-center gap-3">
+        <div className="flex justify-center mr-12  items-center gap-3">
+          <div className="font-semibold text-sm sm:text-base mx-5">
+           Price: ${product.price}
+          </div>
+            <div className="font-semibold text-sm sm:text-base mx-5">
+           Total Price: ${count*product.price}
+          </div>
+          
           <button
             className="px-1 border rounded w-6 flex justify-center pb-1"
             onClick={() => {
@@ -61,11 +65,9 @@ const CartProduct = ({ itemData }) => {
           >
             +
           </button>
+          
         </div>
         {/* Price */}
-        <div className="font-semibold text-sm sm:text-base">
-          ${product.price}
-        </div>
       </div>
     </div>
   );

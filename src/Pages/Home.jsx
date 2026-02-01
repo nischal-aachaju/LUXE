@@ -187,9 +187,9 @@ const Home = () => {
           })}
         </div>
         <div className="flex items-center justify-center w-full h-16 md:mb-6">
-          <button className="  uppercase border-[1.5px] border-gray-400/60 text-[13px] font-semibold tracking-wide  text-gray-800 bg-white px-4 py-[0.4rem]">
+          <button className=" hover:bg-gray-100 uppercase border-[1.5px] border-gray-400/60 text-[13px] font-semibold tracking-wide  text-gray-800 bg-white px-4 py-[0.4rem]">
             {" "}
-            <Link to="/all-products">View All Products</Link>
+            <Link to="/all-products ">View All Products</Link>
           </button>
         </div>
       </div>

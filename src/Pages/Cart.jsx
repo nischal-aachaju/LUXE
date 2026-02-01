@@ -1,5 +1,6 @@
 import React from "react";
 import CartProduct from "../Components/layout/CartProduct";
+import { Link } from "react-router-dom";
 
 const Cart = () => {
   const cartData = JSON.parse(localStorage.getItem("cart"));
@@ -13,9 +14,9 @@ const Cart = () => {
   }
 
   return (
-    <div className="flex flex-col w-full min-h-screen pt-2 mt-12 bg-gray-200">
-      <div className="flex w-full pb-10 pl-4 h-30">
-        <div className="flex flex-col justify-end w-2/3 h-full ">
+    <div className="flex flex-col w-full min-h-screen  pt-2 mt-12 bg-gray-200">
+      <div className="flex w-full pb-10 pl-4 h-30 pt-8 justify-between  ">
+        <div className="flex flex-col justify-between w-2/3 h-full ">
           <h4 className="font-serif text-2xl font-semibold">Shopping Cart</h4>
           <p>
             you have{" "}
@@ -25,9 +26,7 @@ const Cart = () => {
             in your bag
           </p>
         </div>
-        <div className="h-full w-1/3  text-[12px] flex items-end">
-          CONTINUE SHOPPING
-        </div>
+          <Link to="/" className="h-full flex items-end  w-fit cursor-pointer text-sm mr-18 underline overflow-hidden ">CONTINUE SHOPPING</Link>
       </div>
       <div className="flex flex-col w-full h-full gap-3 px-4">
         {cartData?.length > 0 ? (
