@@ -19,7 +19,7 @@ const Navbar = () => {
        <div className="flex justify-between gap-6 px-4 h-14 w-100 ">
          {nav.map((elem,idx) => {
           return (
-            <a key={idx}
+            <Link to={`/page/${elem}`} key={idx}
               className="  w-fit overflow-hiddenborder-y shrink-0  h-fit text-center pt-4   text-[14px] scale-y-95 tracking-wider uppercase
               relative
          after:content-['']
@@ -30,14 +30,16 @@ const Navbar = () => {
          after:transition-transform after:duration-200
          hover:after:scale-x-100" href="">
               {elem}
-            </a>
+
+
+            </Link>
           );
         })}
        </div>
         <div className="flex items-center justify-between gap-8 mr-10 w-fit">
           
             <Search className="cursor-pointer" strokeWidth={1} />
-            <Link to="/cart"><ShoppingBag className="cursor-pointer" strokeWidth={1} /></Link>
+            <Link to="/cart"><ShoppingBag  className="cursor-pointer" strokeWidth={1} /></Link>
           
         </div>
       </div>

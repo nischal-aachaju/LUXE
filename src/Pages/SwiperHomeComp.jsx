@@ -16,7 +16,7 @@ const SwiperHomeComp = ({ data }) => {
             {data.emphasis}
           </span>
         </h2>
-        <p className="text-[12px] md:w-1/3 [text-shadow:0_4px_24px_rgba(0,0,0,0.65)]">
+        <p className="text-[12px] md:w-1/3 lg:w-1/5 [text-shadow:0_4px_24px_rgba(0,0,0,0.65)]">
           {data.description}
         </p>
         <div className="flex gap-2 ">

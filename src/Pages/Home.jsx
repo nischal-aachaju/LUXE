@@ -20,7 +20,7 @@ const Home = () => {
   const swiperData = [
     {
       bgImg:
-        "https://www.ralphlauren.com/on/demandware.static/-/Library-Sites-RalphLauren_NA_Library/default/dwfd2413f2/img/202601/20260113-homepage/0113_hp_c01_img.jpg",
+        "src/assets/images/productpg/hero1.png",
       badge: "Polo Originals",
       title: "Refined",
       emphasis: "Sophistication",
@@ -89,12 +89,12 @@ const Home = () => {
       <div className="w-full px-4 pt-8 mb-12 h-fit md:px-16">
         <div className="flex justify-between ">
           <h1 className="font-serif text-xl">Curated Collections</h1>
-          <a
+          <Link to="/all-products"
             className="text-[15px] w-fit font-semibold text-[#ff9500] flex"
             href=""
           >
-            VIEW ALL <ArrowRight size={20} strokeWidth={1.7} />
-          </a>
+            <>VIEW ALL</> <ArrowRight size={20} strokeWidth={1.7} />
+          </Link>
         </div>
         <p className="text-[12px]">
           Explore our finest categories selected for you.
@@ -110,7 +110,7 @@ const Home = () => {
           })}
         </div>
       </div>
-      <div className="flex flex-col justify-between w-full bg-gradient-to-b from-gray-50 to-gray-100 py-8">
+      <div className="flex flex-col justify-between w-full bg-gradient-to-b from-gray-200 to-gray-50 bg py-8">
         <div className="flex flex-col items-center gap-2 py-8 h-30">
           <p className="uppercase  text-sm text-shadow-[0px_0px_0.1px_#000] font-bold tracking-wide text-[#d4af37]">
             Fresh Drop
@@ -124,7 +124,7 @@ const Home = () => {
           {newArrivel.map((elem, idx) => {
             return (
               <Link key={idx} to={`/products/${elem.id}`} className="w-full">
-                <div className="group relative bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-500 cursor-pointer">
+                <div className="group h-80 relative bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-500 cursor-pointer">
                   <div className="relative overflow-hidden bg-gradient-to-br from-gray-50 to-gray-100">
                     <img
                       className="w-full h-48 md:h-56 lg:h-64 object-contain p-2 transition-transform duration-700 ease-out group-hover:scale-105"
@@ -146,16 +146,16 @@ const Home = () => {
                     </div>
                   </div>
 
-                  <div className="p-3 md:p-4 space-y-2">
+                  <div className="p-3 md:p-4 space-y-2 flex flex-col ">
                     <span className="inline-block text-[10px] md:text-[11px] uppercase tracking-wider text-amber-600 font-semibold">
                       {elem.category}
                     </span>
 
-                    <h5 className="text-sm md:text-[15px] font-serif font-medium text-gray-900 leading-tight line-clamp-2 group-hover:text-amber-700 transition-colors duration-300">
+                    <h5 className="text-sm h-10 md:text-[15px] font-serif font-medium text-gray-900 leading-tight line-clamp-2 group-hover:text-amber-700 transition-colors duration-300">
                       {elem.title}
                     </h5>
 
-                    <div className="flex items-center justify-between pt-1">
+                    <div className="flex items-center   pt-1">
                       <div className="flex items-baseline gap-1.5">
                         <span className="text-lg md:text-xl font-bold text-gray-900">
                           ${elem.price}

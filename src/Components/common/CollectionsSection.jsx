@@ -14,7 +14,7 @@ const CollectionsSection = ({ data }) => {
 
       <div className="absolute flex flex-col justify-between w-full h-full p-3 md:p-4">
         <div className="flex justify-start">
-          <span className="text-[10px] md:text-[11px] py-1 px-3 font-semibold text-white uppercase tracking-wider backdrop-blur-md bg-white/15 border border-white/20 rounded-full shadow-sm transition-all duration-300 group-hover:bg-white/25 group-hover:scale-105">
+          <span className="text-[10px] md:text-[11px] py-1 px-3 font-semibold text-gray-800 uppercase tracking-wider backdrop-blur-md bg-white/15 border border-white/20 rounded-full shadow-sm transition-all duration-300 group-hover:bg-white/25 group-hover:scale-105">
             {data.category}
           </span>
         </div>

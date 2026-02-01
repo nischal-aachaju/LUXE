@@ -3,6 +3,8 @@ import CartProduct from "../Components/layout/CartProduct";
 
 const Cart = () => {
   const cartData = JSON.parse(localStorage.getItem("cart"));
+
+  
   let length_cart = 0;
   if (cartData == null) {
     length_cart = 0;
@@ -29,7 +31,13 @@ const Cart = () => {
       </div>
       <div className="flex flex-col w-full h-full gap-3 px-4">
         {cartData?.length > 0 ? (
-          cartData.map((e, idx) => <CartProduct key={idx} itemData={e} />)
+    
+           cartData.map((e, idx) => {
+
+
+              return <CartProduct key={idx} itemData={e} />
+           } )
+          
         ) : (
           <p>Your cart is empty</p>
         )}

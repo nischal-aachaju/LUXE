@@ -2,7 +2,8 @@ import React, { useContext, useEffect, useState } from "react";
 import { ApiDataContext } from "../../Context/ContextApi";
 
 const CartProduct = ({ itemData }) => {
-  const id = Number(itemData.id);
+  const id = itemData.id
+
 
   const [count, setCount] = useState(Number(itemData.count));
 
@@ -19,7 +20,11 @@ const CartProduct = ({ itemData }) => {
   }, [count, id]);
 
   const data = useContext(ApiDataContext);
+  
   const product = data.find((e) => e.id == id);
+
+
+  
   return (
     <div className="w-full bg-white rounded-2xl border border-gray-200">
       <div className="flex items-center gap-4 p-3 sm:p-4">

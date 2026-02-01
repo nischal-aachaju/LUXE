@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+
 import {
   Search,
   UserRound,
@@ -46,12 +47,12 @@ const Navbar = () => {
           <nav className="absolute left-0 flex items-center w-full gap-0 overflow-hidden h-13 top-14 backdrop-blur-sm z-100">
             {nav.map((elem) => {
               return (
-                <a
+                <Link to={`/page/${elem}`}
                   className="bg-white/10 text-white  w-full  overflow-hidden text-shadow-[0px_0px_4px_#000000] border-y  h-14 text-center pt-5  text-[11px] font-extrabold  underline "
                   href=""
                 >
                   {elem}
-                </a>
+                </Link>
               );
             })}
           </nav>
