@@ -18,17 +18,7 @@ const Home = () => {
   const newArrivel = data.slice(6, 10);
 
   const swiperData = [
-    {
-      bgImg:
-        "src/assets/images/productpg/hero1.png",
-      badge: "Polo Originals",
-      title: "Refined",
-      emphasis: "Sophistication",
-      description:
-        "Iconic silhouettes meet modern luxury. Designed for those who value quiet confidence and timeless elegance.",
-      ctaPrimary: "DISCOVER POLO",
-      ctaSecondary: "VIEW LOOKBOOK",
-    },
+
 
     {
       bgImg:
@@ -64,6 +54,17 @@ const Home = () => {
         "Where high-performance gaming meets iconic character design. Built to stand out, engineered to win.",
       ctaPrimary: "SHOP COLLAB",
       ctaSecondary: "LEARN MORE",
+    },
+        {
+      bgImg:
+        "src/assets/images/productpg/hero1.png",
+      badge: "Polo Originals",
+      title: "Refined",
+      emphasis: "Sophistication",
+      description:
+        "Iconic silhouettes meet modern luxury. Designed for those who value quiet confidence and timeless elegance.",
+      ctaPrimary: "DISCOVER POLO",
+      ctaSecondary: "VIEW LOOKBOOK",
     },
   ];
 

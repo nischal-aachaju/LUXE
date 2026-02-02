@@ -12,7 +12,7 @@ const AddToCartBtn = () => {
     // auto-hide after 2 seconds
     setTimeout(() => {
       setShowNotification(false);
-    }, 700);
+    }, 1000);
   };
 
 

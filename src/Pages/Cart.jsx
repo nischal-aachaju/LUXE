@@ -14,7 +14,7 @@ const Cart = () => {
   }
 
   return (
-    <div className="flex flex-col w-full min-h-screen  pt-2 mt-12 bg-gray-200">
+    <div className="flex flex-col w-full min-h-fit  pt-2 mt-12 pb-3 bg-gray-200">
       <div className="flex w-full pb-10 pl-4 h-30 pt-8 justify-between  ">
         <div className="flex flex-col justify-between w-2/3 h-full ">
           <h4 className="font-serif text-2xl font-semibold">Shopping Cart</h4>
@@ -38,7 +38,12 @@ const Cart = () => {
            } )
           
         ) : (
-          <p>Your cart is empty</p>
+          <div className=" h-60 w-full flex justify-center items-center flex-col">
+           
+            <img src="src/assets/images/productpg/image1.png" alt="hello" />
+            <p className=" text-3xl  uppercase mt-5">Your Cart is Empty </p>
+
+          </div>
         )}
       </div>
     </div>
