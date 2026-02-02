@@ -14,7 +14,7 @@ const Cart = () => {
   }
 
   return (
-    <div className="flex flex-col w-full min-h-fit  pt-2 mt-12 pb-3 bg-gray-200">
+    <div className="flex flex-col w-full min-h-80  pt-2 mt-12 pb-3 bg-gray-200">
       <div className="flex w-full pb-10 pl-4 h-30 pt-8 justify-between  ">
         <div className="flex flex-col justify-between w-2/3 h-full ">
           <h4 className="font-serif text-2xl font-semibold">Shopping Cart</h4>
